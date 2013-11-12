@@ -1,0 +1,249 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{scrartcl} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}\lhead{}\chead{\textit{Group 06 Project : Project Plan Version 1.2 (Draft)}}\rhead{}
+\lfoot{\textit{Aberystwyth University}}\cfoot{\thepage}\rfoot{\textit{Computer Science}}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\usepackage{longtable} % allows long tables that are over a page
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Brief Article}
+\author{The Author}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\newpage
+
+\begin{center}
+\textbf{\LARGE CS22120}\\[0.5cm]
+
+\textbf{\LARGE Group 06 Test Specification} \\[1cm]
+
+{\Large Configuration Reference:}
+
+E.g. : SE\_06\_PP \\[13cm]
+
+\begin{tabular}{ l | r }
+{\large Authors:} & {\large Address:} \\
+Alexander Hardy (alh35) &  Department of Computer Science \\
+Michael Kitchen () & Aberystwyth University \\ 
+Forname Surname (UserID) & Aberystwyth \\
+Forname Surname (UserID) & Ceredigion \\
+{\large Version:} 1.0 (Draft) & SY23 3DB \\
+{\large Date:} \today  &  \\
+
+\end{tabular} \\[0.2cm]
+
+{\small Copyright © Aberystwyth University 2013}
+
+\end{center}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+\subsection{Purpose of the Document} 
+
+This document displays the group's understanding of the purpose and requirements of testing and the aims of carrying out a testing process.
+
+\subsection{Scope} 
+The document covers the process of testing our application and the various testing methods that will be used. It's contents are intended for use by the QA team and the development team.
+
+\subsection{Objectives}
+The aim of the testing processes is to eliminate all bugs from the code. To accomplish this testing will be done on multiple levels. This rigorous testing will hopefully catch as many bugs as possible. Unit testing with white box testing, integration testing using black box testing methods, validation testing, and high end system testing will all be carried out.
+
+\section{Levels of testing and in what order}
+There will be four main testing strategies:
+\begin{itemize}
+\item Unit testing
+\item Integration testing 
+\item System testing 
+\item Public testing \ldots
+\end{itemize}
+The unit tests will be done first and when these all pass the system will be integrated and all the system tests will be done. Once the testing team are satisfied that the whole program works the whole system will be tested by the public.
+\subsection{Unit testing}
+Unit testing will be done in white box fashion. All top level classes will have a set of unit tests that cover their functionality even if this is not covered in the requirements specification. Be done using Basis Path testing methods due to their simplicity and high effectiveness. Loop testing will also be conducted to compliment the basic path testing. The tests will be written by the programmer and should give a pass or fail result. The purpose of these tests is to ensure correct operation of all controls in all the pieces of software tested. The unit testing will be done throughout the building of the system and should also be run frequently. All tests results shall be logged and any failures in these tests shall be addressed and solutions found. When any part of the system is changed all the unit tests will be run again to check that the alteration hasn’t affected any parts of the system. The reliability is important so only the exact same tests will be performed so that we can be sure that we have not regressed.  The pieces of software are expected to perform within design specifications.
+\subsection{Integration testing}
+The system will be integrated incrementally, to control the amount of bugs that need to be fixed at any given time. The system will be tested for errors in a black box fashion, after each component is integrated . The system is expected to integrate without major flaws.
+\subsection{System testing}
+System testing will be closely examined to make sure that the software meets the system requirements. These tests will be made to look for errors with a function requirement. The requirements specification will help us as it will give information on the tests that are required for the project. The features and functionality in the final system will be cross referenced with the design requirements specification to verify that the software is within the requirements. The system tests will test for:
+\begin{itemize}
+
+\item Inputs and outputs of the system.
+\item Places on the system where the data needs to be stored or computed.
+\item Places where the system interacts with the underlying operating system on the machine.\ldots
+\end{itemize}
+To test for bad inputs we will:
+\begin{itemize}
+\item Apply inputs that force all the error messages on erroneous input to occur, meaning that error handling code is executed.
+\item Try defaults – try to give no input and see if okay
+\item Try putting in characters that might be interpreted by the program
+\item Put illegal combinations of data
+\item Overflow input buffers
+\item Force the screen to refresh
+\ldots
+\end{itemize}
+
+To test for wrong data storage or computation again the data will have to be tested with bad input. The boundaries of the data storage will have to be tested as will data that is either to large or to small for the boundaries will have to be tested.\\
+\\No Recovery testing will occur, as while system failures are undesirable, termination of the program in the event of a crash is acceptable. Security testing will be done to make sure that user can not just log on to other people walks that have been tracked. For stress testing the walk may be done at a faster walking pace to make sure that the tracking can keep up with the speed. It will also be tested with multiple people at one time to test the performance. Testing will be done on other errors such as disks being too full to handle data, permissions not being right on files or the network not responding. 
+\subsection{Beta Testing}
+Beta testing will be semi-public. Select individuals outside of PA  Testers will be expected to submit bug reports, as well as their opinions concerning performance and interface layout.
+\subsection{Software To Be Tested}
+The following pieces of software will need to be tested:
+\begin{itemize}
+\item Interface
+\item Android system
+\item PHP
+\item PostgreSQL
+\item Mapping system
+\ldots
+\end{itemize}
+\section{Time schedules for tests}
+The unit testing will commence on the  1/10/14 and finish 1/23/14
+Integration testing will commence on the 1/20/14 and finish 1/24/14
+System Testing …..
+Beta testing ….............
+\section{What Realises of Hardware and Software Environments will be used }
+The software used to test the application will have to run the program so below are the different software that the group can use to test the application and its features:
+\begin{itemize}
+\item Eclipse
+\item Netbeans
+\item Android Studio.
+\end{itemize}
+ 
+Because the Application will be made using Java which can be programmed on various different programming studios such as the ones above. This also makes it easier to test because the group will be able to carry out Junit tests on the various different features. \\
+\\
+The Application will be able to be tested on the university machines as the above software are compatible with both windows and Unix machines alike so group members will be able to test both on the university campus and on their own personal computers if they wish to.\\
+\\
+The Website will be written in XHTML, and one way in which this could be tested would be we could let friends/family members try out the website to see if its easy to get around/work. To see if the actual application works we could put the finished application on to one of the groups phones only if they have a android phone and try it out like an actual product. This as well could be tested on friends or family. \\
+\section{Where will the tests and the test results be stored}
+The tests are going to be analysed in Microsoft excel and then be stored in Microsoft Access in a database.
+\section{What tools maybe used}
+\begin{itemize}
+\item Static analysers – These analyses he possible paths through a program so as to detect suspicious circumstances. These can include: Variable that declared but never used or code that is never reached. These checks are often carried out my compilers.
+\item Dynamic analysers – Keep record of the running of the programs and show how many times each statement has been executed. Useful for checking that each statement has been executed. Let’s tester know where the program spends most of its time so performance can be enhanced.
+\item Test data generators – These accept a description of the format of the required data and then generate random test data according to this format.
+\item File comparators – detects the differences between two files so will be useful for checking large volumes of test output.
+\item Test running tools – We will be using Junit as this is an excellent java test running tool
+\item Interface testers – can be used to remember two things about the interface. One where the user has clicked and two what the user has clicked on.
+\ldots
+\end{itemize}
+\section{What Tests May Be Run}
+\begin{longtable}{| l | | p{4cm} | l | l | l | l |}
+
+\hline
+\hline
+ \textbf{Test No.} & \textbf{Test Name} &  \textbf{Description} & \textbf{Expected Results} & \\ \hline \hline
+1 & New Walking Tour & User creates a new walking tour & User should be able to create a walking tour\\ \hline 
+2 & Check user input & User enters details & Checks the user has entered details in the correct format\\ \hline
+3 & Initial GPS & Sets the initial GPS & The initial GPS should be recorded\\ \hline
+4 & Recording start options & Options should appear & Buttons for cancelling the recording, saving the tour and adding locations should all appear\\ \hline
+5 & Cancel recording button & This button should work & Leads onto a screen containing the new walk tour\\ \hline
+6 & Saving tour button & This button should work & The tour should be saved\\ \hline
+7 & Adding locations button & This button should work & Locations should be added to a map (Including text and locations) \\ \hline
+8 & Single Name & Allows the user to enter a single word name when they have clicked on the new walking tour button & The name entered should be the name used for the database entry\\ \hline
+9 & Title of the walk & User inputs a title for the walk & Title entered the and saved to the database\\ \hline
+10 & Short description for the walk & User enters a short description up to 100 characters & Short description entered and saved to the database\\ \hline
+11 & Long description for the walk & User enters a long description for the walk up to 1000 characters & short description entered and saved to the database\\ \hline
+12 & Text Descriptions & Allows the user to add text descriptions to the walking tour & Button to do this should work and the descriptions added should be saved to the database\\ \hline
+13 & Map Co ordinates & In the text Description the map coordinates should be recorded & Gets the map coordinates from the GPS and adds them to the database for that specific text description\\ \hline
+14 & Name of Location & Adds a name to this text description & Name added to the database for the specific text description\\ \hline
+15 & Description of location & Adds a description of the location to this text description & Description added to the database fir the specific text\\ \hline
+16 & Time stamp of location & Adds the time & Current time should be saved to the database for this text description\\ \hline
+17 & Add Photo & User is able to add a photo & Photo is added if its a JPG and is stored in a database\\ \hline
+18 & Location of photo & Adds coordinates to the photo & For every photo that is added the location coordinates should be stored with the photo\\ \hline
+19 & Name of photo & Asks users and adds a name to the photo & For every photo that is added asks for the user for a name of the photo and saves this in the database with the photo\\ \hline
+20 & Description of photo & Asks users and adds a description to the photo & For every photo that is added asks the user for a description of the photo and saves this in the database with the photo\\ \hline
+21 & Time stamp of photo & Adds the time the photo was taken & Gets the time and saves it with the photo to the database\\ \hline
+22 & Cancel walk & Cancels the walk without saving & Walk is cancelled and all the information is deleted from the database \\ \hline
+23 & Edit & Any information recorded about the walk can be edited & Information can be accessed and be changed\\ \hline
+24 & Save walk & User saves the walk & Walk is saved to a database\\ \hline
+25 & Multi-purpose Internet Mail Extensions & Messaged is formatted as a Multi-purpose Internet Mail Extension Messaged & Should be formatted in this way\\ \hline
+26 & HTTP POST & Messaged is sent to the server via an HTTP POST to a predefined URL & This should work\\ \hline
+27 & Data information & Data that needs to be held is: name, title, long description, short description, list of GPS coordinates for the walk to start to the end, with a time stamp for the location, List of the saved locations with the information and the photos that go with that information\\ \hline
+28 & Android application & When the user switches application using the WTC system stores the current data & Should work\\ \hline
+29 & Walk selected & Users sees all the places included in the walk with correct coordinates & Map appears with the coordinates for the selected walk\\ \hline
+30 & Choose Place & User selects a place and then the correct details appear including the text descriptions and photos & When place is selected correct text description and photo appear\\ \hline
+31 & Data sent & Data sent from the android should be in the correct format & Data should be in standard form\\ \hline
+31 & SQL Database & Data for the new walk should be stored in an SQL Database &  The data should be stored in the correct format\\ \hline
+32 & SQL Format & Data should be in the correct format as appendix a & Data should be in the correct format\\ \hline
+33 & Conformation message & Conformation message should be received by the user & User should receive a message confirming the database has worked\\ \hline
+34 & List of walks & New walks should be added to the list of walks & New walk added to the list\\ \hline
+35 & Response of program & All inputs from user should appear within 1 second & input from user should appear within the time\\ \hline
+36 & Software & All software should run correct and be on the appropriate platform & Software has to run correctly and on the right platform\\ \hline
+37 & Three walks & Data should be made for at least three walks & For this test data the program should run correctly\\ \hline
+\hline
+
+\end{longtable}
+\section{Who says that the tests have been carried out successfully}
+There will be no special resources required for this project. Alex Hardy will be the test leader, however other member of the team will also be involved in the testing process.
+\section{References}
+\section{DOCUMENT HISTORY}
+
+\begin{tabular}{|| l || l || c || r || r ||}
+\hline
+\hline
+ \textbf{Version} & \textbf{CCF No.} &  \textbf{Date} & \textbf{Changes made} & \textbf{Changes made by} \\ \hline \hline
+1.0 & N/A & 30/10/2013 & First \LaTeX  document created & LMC \\ \hline 
+1.1 & N/A & 03/11/2013 & Added Sections 02, 06 \& 09 & LMC \\ \hline
+1.2 & N/A & 04/11/2013 & Added Sections 01, 04 \& 05 & LMC \\ \hline
+1.3 & N/A & 05/11/2013 & Edit to Use-Case Diagrams & LMC \\ \hline
+\hline
+
+\end{tabular}
+
+\end{document}
